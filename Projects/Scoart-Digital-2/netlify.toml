@@ -1,14 +1,7 @@
 [build]
   base = "Projects/Scoart-Digital-2"
   command = "npm run build"
-  publish = "Projects/Scoart-Digital-2/out"
-
-# Disable Next.js plugin for static export
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-  [plugins.inputs]
-    disable = true
+  publish = "out"
 
 [[redirects]]
   from = "/*"
