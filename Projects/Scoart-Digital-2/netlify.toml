@@ -1,0 +1,9 @@
+[build]
+  base = "Projects/Scoart-Digital-2"
+  command = "npm run build"
+  publish = "Projects/Scoart-Digital-2/out"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
