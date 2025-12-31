@@ -99,7 +99,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-lg text-gray-300 max-w-2xl mx-auto"
+            className="body-lg text-gray-200 max-w-2xl mx-auto"
           >
             We combine technical excellence with strategic thinking to deliver
             solutions that make a real difference.

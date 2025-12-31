@@ -104,7 +104,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="container-fluid py-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-200">
             © {currentYear} Scoart Digital. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
@@ -116,7 +116,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-accent-500 transition-colors"
+                  className="text-gray-200 hover:text-accent-500 transition-colors"
                   aria-label={social.label}
                 >
                   <Icon size={20} />

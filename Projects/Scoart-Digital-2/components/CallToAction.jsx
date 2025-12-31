@@ -72,7 +72,7 @@ export default function CallToAction() {
                     Ready to Transform Your{' '}
                     <span className="text-accent-400 dark:text-accent-600">Digital Presence?</span>
                   </h2>
-                  <p className="body-lg text-gray-300 dark:text-dark-700 mb-8 transition-colors duration-300">
+                  <p className="body-lg text-gray-200 dark:text-dark-700 mb-8 transition-colors duration-300">
                     Join 200+ satisfied clients who've scaled their business with our
                     proven digital solutions. Let's create something exceptional together.
                   </p>
