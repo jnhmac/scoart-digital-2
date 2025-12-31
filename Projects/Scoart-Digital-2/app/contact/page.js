@@ -101,11 +101,11 @@ export default function ContactPage() {
               </span>
             </div>
             <h1 className="heading-display mb-6">
-              Let's Build Something{' '}
+              Let&apos;s Build Something{' '}
               <span className="text-gradient">Amazing Together</span>
             </h1>
             <p className="body-lg text-dark-600">
-              Have a project in mind? We'd love to hear about it. Fill out the form
+              Have a project in mind? We&apos;d love to hear about it. Fill out the form
               below or reach out directly.
             </p>
           </motion.div>
@@ -221,7 +221,7 @@ export default function ContactPage() {
                   {/* Honeypot field for spam protection */}
                   <p className="hidden">
                     <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
+                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
                     </label>
                   </p>
                   {/* Name */}
