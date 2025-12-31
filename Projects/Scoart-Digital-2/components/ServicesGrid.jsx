@@ -1,0 +1,186 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { ShoppingCart, TrendingUp, Code2, Megaphone, ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
+
+export default function ServicesGrid() {
+  const services = [
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce Solutions',
+      description:
+        'Build powerful online stores that convert. From Shopify to custom platforms, we create shopping experiences customers love.',
+      color: 'accent',
+      link: '/services#ecommerce',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Marketplace Optimization',
+      description:
+        'Dominate Amazon, eBay, and other marketplaces. Strategic optimization that increases visibility and drives sales.',
+      color: 'primary',
+      link: '/services#marketplace',
+    },
+    {
+      icon: Code2,
+      title: 'Custom Development',
+      description:
+        'Tailored web and mobile applications built with cutting-edge technology. Scalable, secure, and designed to grow with your business.',
+      color: 'dark',
+      link: '/services#development',
+    },
+    {
+      icon: Megaphone,
+      title: 'Digital Marketing',
+      description:
+        'Data-driven marketing strategies that deliver ROI. SEO, PPC, social media, and content that connects with your audience.',
+      color: 'accent',
+      link: '/services#marketing',
+    },
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, 0.05, 0.01, 0.9],
+      },
+    },
+  }
+
+  return (
+    <section className="section-padding bg-white dark:bg-dark-900 transition-colors duration-300">
+      <div className="container-fluid">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-block mb-4 px-4 py-2 bg-primary-100 dark:bg-dark-800 border border-primary-300 dark:border-dark-700 transition-colors duration-300"
+          >
+            <span className="text-sm font-medium uppercase tracking-wider text-dark-900 dark:text-gray-200">
+              What We Do
+            </span>
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="heading-xl mb-6"
+          >
+            Services That Drive{' '}
+            <span className="text-gradient">Real Results</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="body-lg text-dark-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300"
+          >
+            We specialize in digital solutions that transform businesses and
+            exceed expectations.
+          </motion.p>
+        </div>
+
+        {/* Services Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+        >
+          {services.map((service, index) => {
+            const Icon = service.icon
+            const isEven = index % 2 === 0
+
+            return (
+              <motion.div
+                key={service.title}
+                variants={cardVariants}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                className="group relative"
+              >
+                <Link href={service.link}>
+                  <div
+                    className={`
+                    relative h-full p-8 md:p-10
+                    bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-primary-200
+                    transition-all duration-300
+                    ${isEven ? 'shadow-brutal hover:shadow-none' : ''}
+                    ${!isEven ? 'hover:shadow-brutal' : ''}
+                  `}
+                  >
+                    {/* Icon */}
+                    <div
+                      className={`
+                      inline-flex items-center justify-center
+                      w-16 h-16 md:w-20 md:h-20 mb-6
+                      border-2 border-dark-900
+                      transition-all duration-300
+                      ${
+                        service.color === 'accent'
+                          ? 'bg-accent-500 group-hover:bg-accent-600'
+                          : service.color === 'primary'
+                          ? 'bg-primary-300 group-hover:bg-primary-400'
+                          : 'bg-dark-900 group-hover:bg-dark-800'
+                      }
+                    `}
+                    >
+                      <Icon
+                        size={32}
+                        className={
+                          service.color === 'dark' ? 'text-white' : 'text-dark-900'
+                        }
+                        strokeWidth={2}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="heading-md mb-4 text-dark-900 dark:text-gray-100 group-hover:text-accent-500 dark:group-hover:text-accent-400 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="body-base text-dark-600 dark:text-gray-300 mb-6 transition-colors duration-300">
+                      {service.description}
+                    </p>
+
+                    {/* Arrow Link */}
+                    <div className="flex items-center gap-2 text-sm font-medium text-dark-900 dark:text-gray-200 group-hover:text-accent-500 dark:group-hover:text-accent-400 transition-colors">
+                      <span>Learn More</span>
+                      <ArrowUpRight
+                        size={18}
+                        className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                      />
+                    </div>
+
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </Link>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
