@@ -40,25 +40,25 @@ export default function Footer() {
             >
               Scoart<span className="text-accent-500">.</span>
             </Link>
-            <p className="body-base text-gray-300 mb-6 max-w-md">
+            <p className="body-base text-gray-200 mb-6 max-w-md">
               We craft exceptional digital experiences for ambitious brands. Let's build something remarkable together.
             </p>
             <div className="space-y-3">
               <a
                 href="mailto:info@scoartdigital.com"
-                className="flex items-center gap-3 text-gray-300 hover:text-accent-500 transition-colors"
+                className="flex items-center gap-3 text-gray-200 hover:text-accent-500 transition-colors"
               >
                 <Mail size={20} />
                 <span>info@scoartdigital.com</span>
               </a>
               <a
                 href="tel:+14805724596"
-                className="flex items-center gap-3 text-gray-300 hover:text-accent-500 transition-colors"
+                className="flex items-center gap-3 text-gray-200 hover:text-accent-500 transition-colors"
               >
                 <Phone size={20} />
                 <span>+1 (480) 572-4596</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center gap-3 text-gray-200">
                 <MapPin size={20} />
                 <span>Greater Phoenix Area, AZ</span>
               </div>
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-accent-500 transition-colors"
+                    className="text-gray-200 hover:text-accent-500 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-accent-500 transition-colors"
+                    className="text-gray-200 hover:text-accent-500 transition-colors"
                   >
                     {link.label}
                   </Link>
