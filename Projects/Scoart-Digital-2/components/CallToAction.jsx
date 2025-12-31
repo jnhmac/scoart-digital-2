@@ -50,7 +50,7 @@ export default function CallToAction() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-gradient-to-br from-dark-900 to-dark-800 dark:from-dark-800 dark:to-dark-900 border-4 border-dark-900 dark:border-accent-500 shadow-brutal p-8 md:p-12 lg:p-16 transition-colors duration-300"
+            className="relative bg-gradient-to-br from-dark-900 to-dark-800 border-4 border-dark-900 shadow-brutal p-8 md:p-12 lg:p-16"
           >
             {/* Content Grid */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -63,16 +63,16 @@ export default function CallToAction() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="mb-6"
                 >
-                  <div className="inline-block px-4 py-2 bg-accent-500 dark:bg-accent-600 border-2 border-white dark:border-white mb-6 transition-colors duration-300">
+                  <div className="inline-block px-4 py-2 bg-accent-500 border-2 border-white mb-6">
                     <span className="text-sm font-medium uppercase tracking-wider text-white">
                       Let's Work Together
                     </span>
                   </div>
-                  <h2 className="heading-xl text-white dark:text-white mb-6 transition-colors duration-300">
+                  <h2 className="text-5xl font-display font-bold leading-tight text-white mb-6">
                     Ready to Transform Your{' '}
-                    <span className="text-accent-400 dark:text-accent-400">Digital Presence?</span>
+                    <span className="text-accent-400">Digital Presence?</span>
                   </h2>
-                  <p className="body-lg text-gray-100 dark:text-gray-200 mb-8 transition-colors duration-300">
+                  <p className="text-lg leading-relaxed text-gray-100 mb-8">
                     Join 200+ satisfied clients who've scaled their business with our
                     proven digital solutions. Let's create something exceptional together.
                   </p>
@@ -93,9 +93,9 @@ export default function CallToAction() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                      className="flex items-center gap-3 text-white dark:text-white transition-colors duration-300"
+                      className="flex items-center gap-3 text-white"
                     >
-                      <CheckCircle2 size={24} className="text-accent-400 dark:text-accent-400 flex-shrink-0" />
+                      <CheckCircle2 size={24} className="text-accent-400 flex-shrink-0" />
                       <span className="text-base md:text-lg">{benefit}</span>
                     </motion.li>
                   ))}
@@ -111,7 +111,7 @@ export default function CallToAction() {
                 >
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 dark:bg-accent-500 text-white dark:text-white font-medium border-2 border-white dark:border-white transition-all duration-300 hover:bg-accent-600 dark:hover:bg-accent-600 hover:scale-105 active:scale-95 group"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95 group"
                   >
                     Start Your Project
                     <ArrowRight
@@ -121,7 +121,7 @@ export default function CallToAction() {
                   </Link>
                   <a
                     href="mailto:info@scoartdigital.com"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white dark:border-white text-white dark:text-white font-medium transition-all duration-300 hover:bg-white dark:hover:bg-white hover:text-dark-900 dark:hover:text-dark-900"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-medium transition-all duration-300 hover:bg-white hover:text-dark-900"
                   >
                     Email Us
                   </a>

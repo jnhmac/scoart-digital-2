@@ -4,25 +4,57 @@
 
 @layer base {
   :root {
-    --bg-primary: #faf9f0;
-    --bg-secondary: #f5f4eb;
-    --bg-dark: #131314;
-    --accent: #d97757;
-    --accent-dark: #c2603f;
-    --text-primary: #1a1a1a;
-    --text-secondary: #5a5a61;
-    --border: #e8e6d5;
+    /* Backgrounds - Light Mode (Anthropic.com Style) */
+    --bg-primary: #faf9f0;        /* Main page background */
+    --bg-secondary: #f5f4eb;      /* Cards, sections */
+    --bg-elevated: #ffffff;       /* Modals, dropdowns */
+
+    /* Text - Light Mode */
+    --text-primary: #2d2d2d;      /* Headings (14:1 contrast) */
+    --text-secondary: #4a4a4a;    /* Body text (9:1 contrast) */
+    --text-tertiary: #6a6a6a;     /* Muted text (5.5:1 contrast) */
+    --text-inverse: #ffffff;      /* Text on dark backgrounds */
+
+    /* Accent */
+    --accent: #d97757;            /* Brand color */
+    --accent-hover: #c2603f;      /* Hover state */
+    --accent-muted: #f9cdb9;      /* Subtle backgrounds */
+
+    /* Borders */
+    --border: #e8e6d5;            /* Subtle dividers */
+    --border-strong: #d4d0b8;     /* Emphasized borders */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(45, 45, 45, 0.05);
+    --shadow-md: 0 4px 8px rgba(45, 45, 45, 0.08);
+    --shadow-lg: 0 12px 24px rgba(45, 45, 45, 0.12);
   }
 
   .dark {
-    --bg-primary: #131314;
-    --bg-secondary: #1f1f22;
-    --bg-dark: #faf9f0;
-    --accent: #ee7f54;
-    --accent-dark: #f5ab8c;
-    --text-primary: #e3e3e5;
-    --text-secondary: #a4a4aa;
-    --border: #35353a;
+    /* Backgrounds - Dark Mode (Anthropic.com Style) */
+    --bg-primary: #131314;        /* Main page background */
+    --bg-secondary: #1f1f22;      /* Cards, sections */
+    --bg-elevated: #2a2a2c;       /* Modals, dropdowns */
+
+    /* Text - Dark Mode */
+    --text-primary: #f7f7f8;      /* Headings (16:1 contrast) */
+    --text-secondary: #e3e3e5;    /* Body text (12:1 contrast) */
+    --text-tertiary: #c7c7cb;     /* Muted text (7:1 contrast) */
+    --text-inverse: #131314;      /* Text on light backgrounds */
+
+    /* Accent - Brighter in dark mode */
+    --accent: #ee7f54;            /* Brand color (brighter) */
+    --accent-hover: #f5ab8c;      /* Hover state */
+    --accent-muted: #a04d31;      /* Subtle backgrounds */
+
+    /* Borders */
+    --border: #35353a;            /* Subtle dividers */
+    --border-strong: #46464c;     /* Emphasized borders */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.5);
   }
 
   * {
@@ -69,22 +101,22 @@
     @apply grid grid-cols-12 gap-gutter;
   }
 
-  /* Button styles */
+  /* Button styles - Using semantic colors */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-dark-900 dark:bg-accent-500 text-white font-medium rounded-none transition-all duration-300 hover:bg-accent-500 dark:hover:bg-accent-600 hover:scale-105 active:scale-95;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-semantic-accent text-semantic-text-inverse font-medium rounded-none transition-all duration-300 hover:bg-semantic-accent-hover hover:scale-105 active:scale-95;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-dark-900 dark:border-primary-200 text-dark-900 dark:text-gray-200 font-medium rounded-none transition-all duration-300 hover:bg-dark-900 dark:hover:bg-primary-200 hover:text-white dark:hover:text-dark-900;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-semantic-text-primary text-semantic-text-primary font-medium rounded-none transition-all duration-300 hover:bg-semantic-text-primary hover:text-semantic-text-inverse;
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-accent-500 dark:bg-accent-400 text-white font-medium rounded-none transition-all duration-300 hover:bg-accent-600 dark:hover:bg-accent-500 hover:scale-105 active:scale-95;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-semantic-accent text-semantic-text-inverse font-medium rounded-none transition-all duration-300 hover:bg-semantic-accent-hover hover:scale-105 active:scale-95;
   }
 
-  /* Card styles */
+  /* Card styles - Using semantic colors */
   .card {
-    @apply bg-white dark:bg-dark-800 border border-primary-200 dark:border-dark-700 p-8 transition-all duration-300;
+    @apply bg-semantic-bg-secondary border border-semantic-border p-8 transition-all duration-300;
   }
 
   .card-hover {
@@ -120,29 +152,29 @@
     .stagger-5 { animation-delay: 0.5s; }
   }
 
-  /* Typography utilities */
+  /* Typography utilities - Using semantic colors */
   .heading-display {
-    @apply font-display text-display font-bold leading-tight tracking-tight text-dark-900 dark:text-gray-100 transition-colors duration-300;
+    @apply font-display text-display font-bold leading-tight tracking-tight text-semantic-text-primary transition-colors duration-300;
   }
 
   .heading-xl {
-    @apply font-display text-5xl font-bold leading-tight text-dark-900 dark:text-gray-100 transition-colors duration-300;
+    @apply font-display text-5xl font-bold leading-tight text-semantic-text-primary transition-colors duration-300;
   }
 
   .heading-lg {
-    @apply font-display text-4xl font-bold leading-tight text-dark-900 dark:text-gray-100 transition-colors duration-300;
+    @apply font-display text-4xl font-bold leading-tight text-semantic-text-primary transition-colors duration-300;
   }
 
   .heading-md {
-    @apply font-sans text-3xl font-bold leading-tight text-dark-900 dark:text-gray-100 transition-colors duration-300;
+    @apply font-sans text-3xl font-bold leading-tight text-semantic-text-primary transition-colors duration-300;
   }
 
   .body-lg {
-    @apply text-lg leading-relaxed text-dark-700 dark:text-gray-300 transition-colors duration-300;
+    @apply text-lg leading-relaxed text-semantic-text-secondary transition-colors duration-300;
   }
 
   .body-base {
-    @apply text-base leading-relaxed text-dark-700 dark:text-gray-300 transition-colors duration-300;
+    @apply text-base leading-relaxed text-semantic-text-secondary transition-colors duration-300;
   }
 
   /* Shadow utilities */

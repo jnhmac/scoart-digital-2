@@ -9,6 +9,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Semantic background colors
+        'semantic-bg': {
+          primary: 'var(--bg-primary)',
+          secondary: 'var(--bg-secondary)',
+          elevated: 'var(--bg-elevated)',
+        },
+
+        // Semantic text colors
+        'semantic-text': {
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          tertiary: 'var(--text-tertiary)',
+          inverse: 'var(--text-inverse)',
+        },
+
+        // Accent colors
+        'semantic-accent': {
+          DEFAULT: 'var(--accent)',
+          hover: 'var(--accent-hover)',
+          muted: 'var(--accent-muted)',
+        },
+
+        // Border colors
+        'semantic-border': {
+          DEFAULT: 'var(--border)',
+          strong: 'var(--border-strong)',
+        },
+
+        // Original color scales (keep for specific use cases)
         primary: {
           50: '#faf9f0',
           100: '#f5f4eb',

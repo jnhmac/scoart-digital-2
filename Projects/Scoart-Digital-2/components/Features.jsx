@@ -90,7 +90,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-xl mb-6"
+            className="text-5xl font-display font-bold leading-tight text-white mb-6"
           >
             Built for <span className="text-accent-400">Performance</span>
           </motion.h2>
@@ -99,7 +99,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-lg text-gray-100 max-w-2xl mx-auto"
+            className="text-lg leading-relaxed text-white max-w-2xl mx-auto"
           >
             We combine technical excellence with strategic thinking to deliver
             solutions that make a real difference.
@@ -138,7 +138,7 @@ export default function Features() {
                   <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-accent-400 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-100 leading-relaxed">
+                  <p className="text-white leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -155,7 +155,7 @@ export default function Features() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 md:mt-20 text-center"
         >
-          <p className="body-lg text-gray-100 mb-6">
+          <p className="text-lg leading-relaxed text-white mb-6">
             Ready to transform your digital presence?
           </p>
           <a

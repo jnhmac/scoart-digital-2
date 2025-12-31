@@ -93,7 +93,7 @@ export default function ServicesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-lg text-dark-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300"
+            className="body-lg max-w-2xl mx-auto"
           >
             We specialize in digital solutions that transform businesses and
             exceed expectations.
@@ -136,34 +136,26 @@ export default function ServicesGrid() {
                       w-16 h-16 md:w-20 md:h-20 mb-6
                       border-2 border-dark-900 dark:border-white
                       transition-all duration-300
-                      ${
-                        service.color === 'accent'
-                          ? 'bg-accent-500 group-hover:bg-accent-600 dark:bg-accent-500 dark:group-hover:bg-accent-600'
-                          : service.color === 'primary'
-                          ? 'bg-primary-300 group-hover:bg-primary-400 dark:bg-primary-400 dark:group-hover:bg-primary-500'
-                          : 'bg-dark-900 group-hover:bg-dark-800 dark:bg-accent-500 dark:group-hover:bg-accent-600'
-                      }
+                      bg-accent-500 group-hover:bg-accent-600 dark:bg-accent-500 dark:group-hover:bg-accent-600
                     `}
                     >
                       <Icon
                         size={32}
-                        className={
-                          service.color === 'dark' ? 'text-white dark:text-white' : 'text-dark-900 dark:text-white'
-                        }
+                        className="text-dark-900 dark:text-white"
                         strokeWidth={2}
                       />
                     </div>
 
                     {/* Content */}
-                    <h3 className="heading-md mb-4 text-dark-900 dark:text-gray-100 group-hover:text-accent-500 dark:group-hover:text-accent-400 transition-colors">
+                    <h3 className="heading-md mb-4 group-hover:text-semantic-accent transition-colors">
                       {service.title}
                     </h3>
-                    <p className="body-base text-dark-600 dark:text-gray-300 mb-6 transition-colors duration-300">
+                    <p className="body-base mb-6">
                       {service.description}
                     </p>
 
                     {/* Arrow Link */}
-                    <div className="flex items-center gap-2 text-sm font-medium text-dark-900 dark:text-gray-200 group-hover:text-accent-500 dark:group-hover:text-accent-400 transition-colors">
+                    <div className="flex items-center gap-2 text-sm font-medium text-semantic-text-primary group-hover:text-semantic-accent transition-colors">
                       <span>Learn More</span>
                       <ArrowUpRight
                         size={18}

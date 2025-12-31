@@ -81,7 +81,7 @@ export default function Hero() {
           {/* Main Headline */}
           <motion.h1
             variants={itemVariants}
-            className="heading-display mb-6 md:mb-8 dark:text-gray-100"
+            className="heading-display mb-6 md:mb-8"
           >
             Scale Your Digital Business{' '}
             <span className="relative inline-block">
@@ -109,7 +109,7 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="body-lg text-dark-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto"
+            className="body-lg mb-12 max-w-3xl mx-auto"
           >
             We help established brands grow their digital presence through powerful e-commerce solutions,
             marketplace optimization, and custom development. Expert guidance for the US market.
@@ -144,10 +144,10 @@ export default function Hero() {
               { value: '24/7', label: 'Support Available' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-display font-bold text-dark-900 dark:text-gray-100 mb-2">
+                <div className="text-4xl md:text-5xl font-display font-bold text-semantic-text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-dark-600 dark:text-gray-400 font-medium">
+                <div className="text-sm md:text-base text-semantic-text-secondary font-medium">
                   {stat.label}
                 </div>
               </div>

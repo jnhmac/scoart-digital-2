@@ -28,37 +28,37 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-dark-900 dark:bg-primary-50 text-white dark:text-dark-900 transition-colors duration-300">
+    <footer className="bg-semantic-bg-secondary text-semantic-text-primary transition-colors duration-300">
       {/* Main Footer Content */}
-      <div className="container-fluid section-padding border-b border-dark-700 dark:border-dark-200">
+      <div className="container-fluid section-padding border-b border-semantic-border">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="inline-block text-3xl font-display font-bold text-white dark:text-dark-900 hover:text-accent-500 transition-colors duration-300 mb-6"
+              className="inline-block text-3xl font-display font-bold text-semantic-text-primary hover:text-semantic-accent transition-colors duration-300 mb-6"
             >
-              Scoart<span className="text-accent-500">.</span>
+              Scoart<span className="text-semantic-accent">.</span>
             </Link>
-            <p className="body-base text-gray-200 dark:text-dark-700 mb-6 max-w-md">
+            <p className="body-base text-semantic-text-secondary mb-6 max-w-md">
               We craft exceptional digital experiences for ambitious brands. Let's build something remarkable together.
             </p>
             <div className="space-y-3">
               <a
                 href="mailto:info@scoartdigital.com"
-                className="flex items-center gap-3 text-gray-200 dark:text-dark-700 hover:text-accent-500 transition-colors"
+                className="flex items-center gap-3 text-semantic-text-secondary hover:text-semantic-accent transition-colors"
               >
                 <Mail size={20} />
                 <span>info@scoartdigital.com</span>
               </a>
               <a
                 href="tel:+14805724596"
-                className="flex items-center gap-3 text-gray-200 dark:text-dark-700 hover:text-accent-500 transition-colors"
+                className="flex items-center gap-3 text-semantic-text-secondary hover:text-semantic-accent transition-colors"
               >
                 <Phone size={20} />
                 <span>+1 (480) 572-4596</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-200 dark:text-dark-700">
+              <div className="flex items-center gap-3 text-semantic-text-secondary">
                 <MapPin size={20} />
                 <span>Greater Phoenix Area, AZ</span>
               </div>
@@ -67,13 +67,13 @@ export default function Footer() {
 
           {/* Services Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white dark:text-dark-900">Services</h3>
+            <h3 className="text-lg font-bold mb-6 text-semantic-text-primary">Services</h3>
             <ul className="space-y-3">
               {footerLinks.Services.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 dark:text-dark-700 hover:text-accent-500 transition-colors"
+                    className="text-semantic-text-secondary hover:text-semantic-accent transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -84,13 +84,13 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white dark:text-dark-900">Company</h3>
+            <h3 className="text-lg font-bold mb-6 text-semantic-text-primary">Company</h3>
             <ul className="space-y-3">
               {footerLinks.Company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 dark:text-dark-700 hover:text-accent-500 transition-colors"
+                    className="text-semantic-text-secondary hover:text-semantic-accent transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="container-fluid py-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-200 dark:text-dark-600">
+          <p className="text-sm text-semantic-text-tertiary">
             © {currentYear} Scoart Digital. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
@@ -116,7 +116,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-200 dark:text-dark-600 hover:text-accent-500 transition-colors"
+                  className="text-semantic-text-secondary hover:text-semantic-accent transition-colors"
                   aria-label={social.label}
                 >
                   <Icon size={20} />
