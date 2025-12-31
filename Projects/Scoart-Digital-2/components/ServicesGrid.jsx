@@ -123,7 +123,7 @@ export default function ServicesGrid() {
                   <div
                     className={`
                     relative h-full p-8 md:p-10
-                    bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-primary-200
+                    bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-accent-500
                     transition-all duration-300
                     ${isEven ? 'shadow-brutal hover:shadow-none' : ''}
                     ${!isEven ? 'hover:shadow-brutal' : ''}
@@ -134,21 +134,21 @@ export default function ServicesGrid() {
                       className={`
                       inline-flex items-center justify-center
                       w-16 h-16 md:w-20 md:h-20 mb-6
-                      border-2 border-dark-900
+                      border-2 border-dark-900 dark:border-white
                       transition-all duration-300
                       ${
                         service.color === 'accent'
-                          ? 'bg-accent-500 group-hover:bg-accent-600'
+                          ? 'bg-accent-500 group-hover:bg-accent-600 dark:bg-accent-500 dark:group-hover:bg-accent-600'
                           : service.color === 'primary'
-                          ? 'bg-primary-300 group-hover:bg-primary-400'
-                          : 'bg-dark-900 group-hover:bg-dark-800'
+                          ? 'bg-primary-300 group-hover:bg-primary-400 dark:bg-primary-400 dark:group-hover:bg-primary-500'
+                          : 'bg-dark-900 group-hover:bg-dark-800 dark:bg-accent-500 dark:group-hover:bg-accent-600'
                       }
                     `}
                     >
                       <Icon
                         size={32}
                         className={
-                          service.color === 'dark' ? 'text-white' : 'text-dark-900'
+                          service.color === 'dark' ? 'text-white dark:text-white' : 'text-dark-900 dark:text-white'
                         }
                         strokeWidth={2}
                       />
