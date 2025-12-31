@@ -160,7 +160,7 @@ export default function Features() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent-500 text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-accent-500 text-white dark:text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95"
           >
             Get Started Today
             <Rocket size={20} />

@@ -111,7 +111,7 @@ export default function CallToAction() {
                 >
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95 group"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 text-white dark:text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95 group"
                   >
                     Start Your Project
                     <ArrowRight

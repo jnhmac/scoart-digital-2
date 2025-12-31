@@ -72,9 +72,9 @@ export default function ServicesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-block mb-4 px-4 py-2 bg-primary-100 dark:bg-dark-800 border border-primary-300 dark:border-dark-700 transition-colors duration-300"
+            className="inline-block mb-4 px-4 py-2 bg-accent-500 border-2 border-dark-900 dark:border-white"
           >
-            <span className="text-sm font-medium uppercase tracking-wider text-dark-900 dark:text-gray-200">
+            <span className="text-sm font-medium uppercase tracking-wider text-white">
               What We Do
             </span>
           </motion.div>
