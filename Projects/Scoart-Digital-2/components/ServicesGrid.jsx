@@ -10,7 +10,7 @@ export default function ServicesGrid() {
       icon: ShoppingCart,
       title: 'E-commerce Solutions',
       description:
-        'Build powerful online stores that convert. From Shopify to custom platforms, we create shopping experiences customers love.',
+        'Launch a market-ready storefront with payment processing, tax compliance, and shipping built in. Shopify, WooCommerce, or fully custom.',
       color: 'accent',
       link: '/services#ecommerce',
     },
@@ -18,7 +18,7 @@ export default function ServicesGrid() {
       icon: TrendingUp,
       title: 'Marketplace Optimization',
       description:
-        'Dominate Amazon, eBay, and other marketplaces. Strategic optimization that increases visibility and drives sales.',
+        'Get your products ranking on Amazon, Shopify, and WooCommerce. We handle listings, PPC campaigns, and performance tracking so you sell more.',
       color: 'primary',
       link: '/services#marketplace',
     },
@@ -26,7 +26,7 @@ export default function ServicesGrid() {
       icon: Code2,
       title: 'Custom Development',
       description:
-        'Tailored web and mobile applications built with cutting-edge technology. Scalable, secure, and designed to grow with your business.',
+        'Web apps, marketing automation, and API integrations built with React, Next.js, and HubSpot. Designed to handle growth from day one.',
       color: 'dark',
       link: '/services#development',
     },
@@ -34,7 +34,7 @@ export default function ServicesGrid() {
       icon: Megaphone,
       title: 'Digital Marketing',
       description:
-        'Data-driven marketing strategies that deliver ROI. SEO, PPC, social media, and content that connects with your audience.',
+        'SEO, GEO (AI search optimization), Google Ads, and content strategy that drives results. We get your brand found on Google, ChatGPT, and AI search platforms, and track every dollar.',
       color: 'accent',
       link: '/services#marketing',
     },
@@ -95,8 +95,7 @@ export default function ServicesGrid() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="body-lg max-w-2xl mx-auto"
           >
-            We specialize in digital solutions that transform businesses and
-            exceed expectations.
+            Everything you need to sell, grow, and compete in the US digital market.
           </motion.p>
         </div>
 
