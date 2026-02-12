@@ -1,10 +1,23 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 
+function getGeoCookie() {
+  if (typeof document === 'undefined') return null
+  const match = document.cookie.match(/geo=(US|INTL)/)
+  return match ? match[1] : null
+}
+
 export default function Hero() {
+  const [isUS, setIsUS] = useState(false)
+
+  useEffect(() => {
+    const geo = getGeoCookie()
+    if (geo === 'US') setIsUS(true)
+  }, [])
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,7 +87,9 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="mb-8 inline-block">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-primary-200 shadow-brutal-sm">
               <Sparkles size={16} className="text-accent-500" />
-              <span className="text-sm font-medium dark:text-gray-200">Empowering Global Brands in the US Market</span>
+              <span className="text-sm font-medium dark:text-gray-200">
+                {isUS ? 'E-commerce & Digital Growth Solutions' : 'Empowering Global Brands in the US Market'}
+              </span>
             </div>
           </motion.div>
 
@@ -85,7 +100,7 @@ export default function Hero() {
           >
             Scale Your Digital Business{' '}
             <span className="relative inline-block">
-              <span className="text-gradient dark:text-accent-400">In America</span>
+              <span className="text-gradient dark:text-accent-400">{isUS ? 'Globally' : 'In America'}</span>
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 height="12"
@@ -111,8 +126,10 @@ export default function Hero() {
             variants={itemVariants}
             className="body-lg mb-12 max-w-3xl mx-auto"
           >
-            We help established brands grow their digital presence through powerful e-commerce solutions,
-            marketplace optimization, and custom development. Expert guidance for the US market.
+            {isUS
+              ? 'Your brand deserves more than a translation layer. We build e-commerce stores, marketplace listings, and marketing systems designed to convert buyers across global markets.'
+              : 'Your brand deserves more than a translation layer. We build the e-commerce stores, marketplace listings, and marketing systems that actually convert American buyers.'
+            }
           </motion.p>
 
           {/* CTA Buttons */}
@@ -121,14 +138,14 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link href="/contact" className="btn-primary group">
-              Start Your Project
+              Book a Free Strategy Call
               <ArrowRight
                 size={20}
                 className="ml-2 transition-transform group-hover:translate-x-1"
               />
             </Link>
             <Link href="/services" className="btn-secondary">
-              Explore Services
+              See How We Work
             </Link>
           </motion.div>
 
@@ -139,9 +156,9 @@ export default function Hero() {
           >
             {[
               { value: '50+', label: 'Projects Delivered' },
-              { value: '100%', label: 'Client Satisfaction' },
-              { value: 'US', label: 'Market Specialist' },
-              { value: '24/7', label: 'Support Available' },
+              { value: '8+', label: 'Countries Served' },
+              { value: '2021', label: 'Established' },
+              { value: 'Full', label: 'Stack Team' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-display font-bold text-semantic-text-primary mb-2">
