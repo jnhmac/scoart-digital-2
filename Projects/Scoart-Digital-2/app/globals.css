@@ -103,7 +103,7 @@
 
   /* Button styles - Using semantic colors */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-semantic-accent text-semantic-text-inverse font-medium rounded-none transition-all duration-300 hover:bg-semantic-accent-hover hover:scale-105 active:scale-95;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-semantic-accent text-semantic-text-inverse font-semibold border-2 border-dark-900 dark:border-white rounded-none transition-all duration-300 hover:bg-semantic-accent-hover hover:scale-105 active:scale-95;
   }
 
   .btn-secondary {
@@ -111,7 +111,7 @@
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-semantic-accent text-semantic-text-inverse font-medium rounded-none transition-all duration-300 hover:bg-semantic-accent-hover hover:scale-105 active:scale-95;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-semantic-accent text-semantic-text-inverse font-semibold border-2 border-dark-900 dark:border-white rounded-none transition-all duration-300 hover:bg-semantic-accent-hover hover:scale-105 active:scale-95;
   }
 
   /* Card styles - Using semantic colors */
