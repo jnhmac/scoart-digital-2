@@ -155,10 +155,10 @@ export default function Hero() {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: '50+', label: 'Projects Delivered' },
+              { value: '100%', label: 'Tailored Solutions' },
               { value: '8+', label: 'Countries Served' },
-              { value: '2021', label: 'Established' },
-              { value: 'Full', label: 'Stack Team' },
+              { value: '24/7', label: 'Live Support' },
+              { value: '14+', label: 'Marketplaces' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-display font-bold text-semantic-text-primary mb-2">
