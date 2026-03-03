@@ -28,6 +28,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# netlify cli local cache (contains absolute local paths)
+.netlify/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
