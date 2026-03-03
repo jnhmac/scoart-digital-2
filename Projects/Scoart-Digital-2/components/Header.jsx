@@ -21,6 +21,7 @@ export default function Header() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
+    { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -63,7 +64,7 @@ export default function Header() {
               href="/contact"
               className="btn-primary text-sm"
             >
-              Get Started
+              Free Consultation
             </Link>
           </div>
 
@@ -118,7 +119,7 @@ export default function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="btn-primary w-full text-center"
                 >
-                  Get Started
+                  Free Consultation
                 </Link>
               </motion.div>
             </div>

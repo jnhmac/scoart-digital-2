@@ -1,6 +1,16 @@
-<svg width="160" height="50" viewBox="0 0 160 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#2d2d2d">
-    Scoart
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150">
+  <style>
+    .brand-text {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 120px;
+      fill: #000000;
+    }
+    .brand-dot {
+      fill: #C56E4F;
+    }
+  </style>
+  <text x="0" y="110" class="brand-text">
+    Scoart<tspan class="brand-dot">.</tspan>
   </text>
-  <circle cx="150" cy="38" r="5" fill="#d97757"/>
 </svg>

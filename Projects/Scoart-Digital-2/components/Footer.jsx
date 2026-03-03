@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -15,6 +15,7 @@ export default function Footer() {
     ],
     Company: [
       { label: 'About Us', href: '/about' },
+      { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/contact' },
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms of Service', href: '/terms' },
@@ -22,9 +23,7 @@ export default function Footer() {
   }
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/scoart-technology', label: 'LinkedIn' },
   ]
 
   return (
@@ -41,7 +40,7 @@ export default function Footer() {
               Scoart<span className="text-semantic-accent">.</span>
             </Link>
             <p className="body-base text-semantic-text-secondary mb-6 max-w-md">
-              We craft exceptional digital experiences for ambitious brands. Let's build something remarkable together.
+              Digital solutions that drive real results. E-commerce, marketplace optimization, custom development, and marketing. Based in Phoenix, AZ.
             </p>
             <div className="space-y-3">
               <a

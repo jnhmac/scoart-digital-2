@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,17 +15,53 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+  const [turnstileToken, setTurnstileToken] = useState(null)
+  const turnstileRef = useRef(null)
+
+  const renderTurnstile = useCallback(() => {
+    if (window.turnstile && turnstileRef.current && !turnstileRef.current.dataset.rendered) {
+      turnstileRef.current.dataset.rendered = 'true'
+      window.turnstile.render(turnstileRef.current, {
+        sitekey: '0x4AAAAAACa63rOxIIndsaqz',
+        callback: (token) => setTurnstileToken(token),
+        'expired-callback': () => setTurnstileToken(null),
+        theme: 'auto',
+      })
+    }
+  }, [])
+
+  useEffect(() => {
+    if (window.turnstile) {
+      renderTurnstile()
+      return
+    }
+    const script = document.createElement('script')
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad&render=explicit'
+    script.async = true
+    window.onTurnstileLoad = renderTurnstile
+    document.head.appendChild(script)
+    return () => {
+      delete window.onTurnstileLoad
+    }
+  }, [renderTurnstile])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus(null)
 
+    if (!turnstileToken) {
+      setSubmitStatus('error')
+      setIsSubmitting(false)
+      return
+    }
+
     try {
       const form = e.target
       const formData = new FormData(form)
+      formData.append('cf-turnstile-response', turnstileToken)
 
-      const response = await fetch('/', {
+      const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
@@ -34,6 +70,8 @@ export default function ContactPage() {
       if (response.ok) {
         setSubmitStatus('success')
         setFormData({ name: '', email: '', company: '', service: '', message: '' })
+        setTurnstileToken(null)
+        if (window.turnstile) window.turnstile.reset()
       } else {
         setSubmitStatus('error')
       }
@@ -85,7 +123,7 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-dark-900 dark:via-dark-900 dark:to-dark-800 transition-colors duration-300">
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-fluid">
@@ -95,18 +133,18 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-block mb-6 px-4 py-2 bg-white border-2 border-dark-900 shadow-brutal-sm">
-              <span className="text-sm font-medium uppercase tracking-wider">
+            <div className="inline-block mb-6 px-4 py-2 bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-dark-700 shadow-brutal-sm">
+              <span className="text-sm font-medium uppercase tracking-wider dark:text-gray-200">
                 Get In Touch
               </span>
             </div>
             <h1 className="heading-display mb-6">
-              Let&apos;s Build Something{' '}
-              <span className="text-gradient">Amazing Together</span>
+              Tell Us About{' '}
+              <span className="text-gradient">Your Project</span>
             </h1>
-            <p className="body-lg text-dark-600">
-              Have a project in mind? We&apos;d love to hear about it. Fill out the form
-              below or reach out directly.
+            <p className="body-lg text-dark-600 dark:text-gray-400">
+              Describe what you need and we&apos;ll get back to you within one business day
+              with an honest assessment and next steps.
             </p>
           </motion.div>
         </div>
@@ -133,15 +171,15 @@ export default function ContactPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                    className="block p-6 bg-white border-2 border-dark-900 transition-all duration-300 hover:shadow-brutal-sm hover:-translate-y-1 group"
+                    className="block p-6 bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-dark-700 transition-all duration-300 hover:shadow-brutal-sm hover:-translate-y-1 group"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-accent-500 border-2 border-dark-900 flex items-center justify-center transition-transform group-hover:scale-110">
+                      <div className="flex-shrink-0 w-12 h-12 bg-accent-500 border-2 border-dark-900 dark:border-dark-600 flex items-center justify-center transition-transform group-hover:scale-110">
                         <Icon size={24} className="text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-dark-900 mb-1">{info.title}</h3>
-                        <p className="text-dark-600">{info.value}</p>
+                        <h3 className="font-bold text-dark-900 dark:text-gray-100 mb-1">{info.title}</h3>
+                        <p className="text-dark-600 dark:text-gray-400">{info.value}</p>
                       </div>
                     </div>
                   </motion.a>
@@ -170,7 +208,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="lg:col-span-2"
             >
-              <div className="bg-white border-4 border-dark-900 shadow-brutal p-8 md:p-10">
+              <div className="bg-white dark:bg-dark-800 border-4 border-dark-900 dark:border-dark-700 shadow-brutal p-8 md:p-10">
                 <h2 className="heading-md mb-8">Send Us a Message</h2>
 
                 {/* Success Message */}
@@ -228,7 +266,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-dark-900 mb-2"
+                      className="block text-sm font-medium text-dark-900 dark:text-gray-200 mb-2"
                     >
                       Your Name *
                     </label>
@@ -239,7 +277,7 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-dark-900 bg-white focus:outline-none focus:border-accent-500 transition-colors"
+                      className="w-full px-4 py-2 border-2 border-dark-900 dark:border-dark-600 bg-white dark:bg-dark-700 dark:text-gray-100 focus:outline-none focus:border-accent-500 transition-colors"
                       placeholder="John Doe"
                     />
                   </div>
@@ -248,7 +286,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-dark-900 mb-2"
+                      className="block text-sm font-medium text-dark-900 dark:text-gray-200 mb-2"
                     >
                       Email Address *
                     </label>
@@ -259,7 +297,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-dark-900 bg-white focus:outline-none focus:border-accent-500 transition-colors"
+                      className="w-full px-4 py-2 border-2 border-dark-900 dark:border-dark-600 bg-white dark:bg-dark-700 dark:text-gray-100 focus:outline-none focus:border-accent-500 transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -268,7 +306,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-medium text-dark-900 mb-2"
+                      className="block text-sm font-medium text-dark-900 dark:text-gray-200 mb-2"
                     >
                       Company Name
                     </label>
@@ -278,7 +316,7 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-dark-900 bg-white focus:outline-none focus:border-accent-500 transition-colors"
+                      className="w-full px-4 py-2 border-2 border-dark-900 dark:border-dark-600 bg-white dark:bg-dark-700 dark:text-gray-100 focus:outline-none focus:border-accent-500 transition-colors"
                       placeholder="Your Company"
                     />
                   </div>
@@ -287,7 +325,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="service"
-                      className="block text-sm font-medium text-dark-900 mb-2"
+                      className="block text-sm font-medium text-dark-900 dark:text-gray-200 mb-2"
                     >
                       Service Interested In *
                     </label>
@@ -297,7 +335,7 @@ export default function ContactPage() {
                       required
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-dark-900 bg-white focus:outline-none focus:border-accent-500 transition-colors"
+                      className="w-full px-4 py-2 border-2 border-dark-900 dark:border-dark-600 bg-white dark:bg-dark-700 dark:text-gray-100 focus:outline-none focus:border-accent-500 transition-colors appearance-none"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -312,7 +350,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-dark-900 mb-2"
+                      className="block text-sm font-medium text-dark-900 dark:text-gray-200 mb-2"
                     >
                       Your Message *
                     </label>
@@ -323,16 +361,19 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-dark-900 bg-white focus:outline-none focus:border-accent-500 transition-colors resize-none"
+                      className="w-full px-4 py-2 border-2 border-dark-900 dark:border-dark-600 bg-white dark:bg-dark-700 dark:text-gray-100 focus:outline-none focus:border-accent-500 transition-colors resize-none"
                       placeholder="Tell us about your project..."
                     />
                   </div>
+
+                  {/* Turnstile Widget */}
+                  <div ref={turnstileRef} />
 
                   {/* Submit Button */}
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-dark-900 text-white font-medium transition-all duration-300 hover:bg-accent-500 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-dark-900 dark:bg-accent-500 text-white font-medium transition-all duration-300 hover:bg-accent-500 dark:hover:bg-accent-400 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {isSubmitting ? (
                       <>

@@ -88,7 +88,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-dark-800 border-2 border-dark-900 dark:border-primary-200 shadow-brutal-sm">
               <Sparkles size={16} className="text-accent-500" />
               <span className="text-sm font-medium dark:text-gray-200">
-                {isUS ? 'E-commerce & Digital Growth Solutions' : 'Empowering Global Brands in the US Market'}
+                {isUS ? 'AI-Powered E-commerce & Digital Growth' : 'Empowering Global Brands in the US Market'}
               </span>
             </div>
           </motion.div>

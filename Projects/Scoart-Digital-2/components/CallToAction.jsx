@@ -6,10 +6,10 @@ import Link from 'next/link'
 
 export default function CallToAction() {
   const benefits = [
-    'Free initial consultation',
-    'Custom strategy tailored to your goals',
-    'Transparent pricing, no hidden fees',
-    'Dedicated project manager',
+    'Free 30-minute strategy call',
+    'Custom roadmap for your US market entry',
+    'Transparent pricing with milestone-based billing',
+    'Dedicated project manager from kickoff to launch',
   ]
 
   return (
@@ -69,12 +69,12 @@ export default function CallToAction() {
                     </span>
                   </div>
                   <h2 className="text-5xl font-display font-bold leading-tight text-white mb-6">
-                    Ready to Transform Your{' '}
-                    <span className="text-accent-400">Digital Presence?</span>
+                    Ready to Sell in{' '}
+                    <span className="text-accent-400">the US Market?</span>
                   </h2>
                   <p className="text-lg leading-relaxed text-gray-100 mb-8">
-                    Join 200+ satisfied clients who've scaled their business with our
-                    proven digital solutions. Let's create something exceptional together.
+                    Most international brands waste months figuring out US e-commerce on their own.
+                    We shortcut that. Tell us where you are and where you want to be.
                   </p>
                 </motion.div>
 
@@ -113,18 +113,12 @@ export default function CallToAction() {
                     href="/contact"
                     className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 text-white dark:text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95 group"
                   >
-                    Start Your Project
+                    Get Your Free Strategy Call
                     <ArrowRight
                       size={20}
                       className="ml-2 transition-transform group-hover:translate-x-1"
                     />
                   </Link>
-                  <a
-                    href="mailto:info@scoartdigital.com"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-medium transition-all duration-300 hover:bg-white hover:text-dark-900"
-                  >
-                    Email Us
-                  </a>
                 </motion.div>
               </div>
 

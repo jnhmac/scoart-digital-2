@@ -18,26 +18,26 @@ export default function ThemeToggle() {
       <motion.div
         initial={false}
         animate={{
-          scale: theme === 'light' ? 1 : 0,
-          opacity: theme === 'light' ? 1 : 0,
-          rotate: theme === 'light' ? 0 : 180,
+          scale: theme === 'dark' ? 1 : 0,
+          opacity: theme === 'dark' ? 1 : 0,
+          rotate: theme === 'dark' ? 0 : 180,
         }}
         transition={{ duration: 0.3 }}
         className="absolute"
       >
-        <Sun size={20} className="text-dark-900" />
+        <Sun size={20} className="text-primary-100" />
       </motion.div>
       <motion.div
         initial={false}
         animate={{
-          scale: theme === 'dark' ? 1 : 0,
-          opacity: theme === 'dark' ? 1 : 0,
-          rotate: theme === 'dark' ? 0 : -180,
+          scale: theme === 'light' ? 1 : 0,
+          opacity: theme === 'light' ? 1 : 0,
+          rotate: theme === 'light' ? 0 : -180,
         }}
         transition={{ duration: 0.3 }}
         className="absolute"
       >
-        <Moon size={20} className="text-primary-100" />
+        <Moon size={20} className="text-dark-900" />
       </motion.div>
     </motion.button>
   )

@@ -8,32 +8,32 @@ export default function Features() {
     {
       icon: Zap,
       title: 'Lightning Fast',
-      description: 'Optimized performance that keeps customers engaged and conversions high.',
+      description: 'We build high-performance sites and stores optimized for speed, SEO, GEO, and conversions, because every second counts.',
     },
     {
       icon: Target,
       title: 'Results Focused',
-      description: 'Every decision backed by data, every strategy designed to achieve your goals.',
+      description: 'From marketplace sales to ad ROI, we measure what matters and optimize until the numbers move.',
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security protocols protecting your business and customer data.',
+      title: 'Secure by Default',
+      description: 'Every project follows security best practices, from PCI-compliant checkouts to encrypted data handling.',
     },
     {
       icon: Rocket,
-      title: 'Scalable Growth',
-      description: 'Infrastructure that grows with your business, from startup to enterprise.',
+      title: 'Scalable Solutions',
+      description: 'We design solutions that grow with your business, whether you\'re launching one product or managing thousands of SKUs.',
     },
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Dedicated specialists with years of experience in digital transformation.',
+      title: 'Full-Stack Team',
+      description: 'Developers, marketers, and strategists working together so you get a complete solution, not just code.',
     },
     {
       icon: Award,
       title: 'Proven Track Record',
-      description: '200+ successful projects delivered on time and within budget.',
+      description: 'A growing portfolio of successful projects delivered on time and built to last.',
     },
   ]
 
@@ -101,8 +101,7 @@ export default function Features() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg leading-relaxed text-white max-w-2xl mx-auto"
           >
-            We combine technical excellence with strategic thinking to deliver
-            solutions that make a real difference.
+            Here&apos;s how we work and what you can expect when you partner with us.
           </motion.p>
         </div>
 
@@ -156,13 +155,13 @@ export default function Features() {
           className="mt-16 md:mt-20 text-center"
         >
           <p className="text-lg leading-relaxed text-white mb-6">
-            Ready to transform your digital presence?
+            Sound like what you need?
           </p>
           <a
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent-500 text-white dark:text-white font-medium border-2 border-white transition-all duration-300 hover:bg-accent-600 hover:scale-105 active:scale-95"
           >
-            Get Started Today
+            Let&apos;s Talk
             <Rocket size={20} />
           </a>
         </motion.div>
