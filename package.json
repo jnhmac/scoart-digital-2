@@ -1,0 +1,39 @@
+{
+  "name": "scoart-digital-2",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.28",
+    "@ai-sdk/react": "^3.0.87",
+    "@supabase/supabase-js": "^2.95.3",
+    "ai": "^6.0.85",
+    "firebase-admin": "^13.7.0",
+    "framer-motion": "^11.2.6",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.395.0",
+    "next": "^14.2.4",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.8",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
+  }
+}

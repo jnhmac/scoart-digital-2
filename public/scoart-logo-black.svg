@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150">
+  <style>
+    .brand-text {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 120px;
+      fill: #000000;
+    }
+    .brand-dot {
+      fill: #C56E4F;
+    }
+  </style>
+  <text x="0" y="110" class="brand-text">
+    Scoart<tspan class="brand-dot">.</tspan>
+  </text>
+</svg>

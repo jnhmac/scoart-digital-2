@@ -1,0 +1,3 @@
+[   40644ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://scoartdigital.com/api/chat:0
+[   40646ms] [ERROR] Chat error: Error: {"errorType":"Error","errorMessage":"An unknown error has occurred"}
+    at https://scoartdigital.com/_next/static/chunks/app/layout-10886700c98e55cd.js:1:2523 @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0

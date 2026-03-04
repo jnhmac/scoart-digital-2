@@ -1,0 +1,231 @@
+[  124195ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/contact. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124195ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/services. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124195ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/blog. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124195ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/about. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124381ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/about. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124381ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/services. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124381ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/contact. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124381ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/blog. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124687ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/blog. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124687ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/services. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124687ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/contact. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124687ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/about. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124844ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/contact. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124844ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/services. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124844ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/about. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124844ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/blog. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124984ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/contact. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124984ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/services. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124984ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/blog. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124984ms] [ERROR] Failed to fetch RSC payload for https://scoartdigital.com/about. Falling back to browser navigation. TypeError: Failed to fetch
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:45433)
+    at https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58959
+    at Object.u [as task] (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31834)
+    at c.s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:32539)
+    at c.enqueue (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:31964)
+    at s (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58922)
+    at i (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:58462)
+    at a (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:65251)
+    at f (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:1:75111)
+    at Object.action (https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:2:7082) @ https://scoartdigital.com/_next/static/chunks/117-4f5b424f20efdcae.js:0
+[  124985ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://scoartdigital.com/:0
+[  125152ms] [ERROR] TypeError: Failed to fetch
+    at https://scoartdigital.com/:73:20 @ https://scoartdigital.com/:27
+[  125153ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://scoartdigital.com/:0
+[  125298ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://scoartdigital.com/:0
+[  125450ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://scoartdigital.com/:0
+[  125603ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://scoartdigital.com/:0
+[  125770ms] [ERROR] TypeError: Failed to fetch
+    at https://scoartdigital.com/:73:20 @ https://scoartdigital.com/:27
+[  125771ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://scoartdigital.com/:0
+[  125977ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://scoartdigital.com/favicon.ico:0

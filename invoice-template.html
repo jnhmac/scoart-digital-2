@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice — Scoart Digital</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #faf9f0;
+      --surface:     #ffffff;
+      --border:      #e8e6d5;
+      --text-dark:   #393530;
+      --text-mid:    #6a6359;
+      --text-light:  #9d9580;
+      --accent:      #C56E4F;
+      --accent-dark: #a04d31;
+      --accent-muted:#fce8df;
+      --stripe:      #f5f4eb;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      min-height: 100vh;
+      padding: 40px 20px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── Paper ── */
+    .invoice {
+      background: var(--surface);
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    /* ── Header Bar ── */
+    .header {
+      background: var(--text-dark);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--accent); }
+
+    .invoice-label {
+      text-align: right;
+    }
+    .invoice-label .word {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .invoice-label .number {
+      font-size: 13px;
+      color: #b8b29a;
+      margin-top: 4px;
+    }
+
+    /* ── Meta strip ── */
+    .meta-strip {
+      background: var(--accent);
+      padding: 12px 48px;
+      display: flex;
+      gap: 40px;
+    }
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .meta-item .label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: rgba(255,255,255,0.7);
+    }
+    .meta-item .value {
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .meta-item.status .value {
+      background: rgba(255,255,255,0.2);
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    /* ── Body ── */
+    .body {
+      padding: 40px 48px;
+    }
+
+    /* ── Parties ── */
+    .parties {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .party-block .party-type {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .party-block .company-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .party-block p {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 40px;
+    }
+
+    /* ── Table ── */
+    .table-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0;
+    }
+    thead tr {
+      background: var(--text-dark);
+    }
+    thead th {
+      padding: 10px 16px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #b8b29a;
+      text-align: left;
+    }
+    thead th:last-child { text-align: right; }
+    thead th:nth-child(2), thead th:nth-child(3) { text-align: center; }
+
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:nth-child(even) { background: var(--stripe); }
+    tbody tr:last-child { border-bottom: none; }
+
+    tbody td {
+      padding: 14px 16px;
+      font-size: 13.5px;
+      color: var(--text-dark);
+      vertical-align: top;
+    }
+    tbody td:last-child { text-align: right; font-weight: 600; white-space: nowrap; }
+    tbody td:nth-child(2), tbody td:nth-child(3) { text-align: center; color: var(--text-mid); }
+
+    .item-desc {
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .item-note {
+      font-size: 11.5px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* ── Totals ── */
+    .totals-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+    .totals-box {
+      width: 280px;
+      border: 1px solid var(--border);
+      border-top: none;
+    }
+    .totals-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 16px;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+    }
+    .totals-line:last-child { border-bottom: none; }
+    .totals-line.total {
+      background: var(--text-dark);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 16px;
+    }
+    .totals-line.total .amount { color: var(--accent); }
+
+    /* ── Notes & Terms ── */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-block .block-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .footer-block p {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    /* ── Payment ── */
+    .payment-block {
+      background: var(--accent-muted);
+      border: 1px solid #f9cdb9;
+      border-radius: 4px;
+      padding: 16px 20px;
+    }
+    .payment-block .block-label {
+      color: var(--accent-dark);
+    }
+    .payment-block p { color: var(--text-mid); }
+    .payment-detail {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12.5px;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .payment-detail .key { color: var(--text-mid); }
+    .payment-detail .val { font-weight: 600; }
+
+    /* ── Bottom strip ── */
+    .bottom-strip {
+      background: var(--stripe);
+      border-top: 1px solid var(--border);
+      padding: 16px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .bottom-strip p {
+      font-size: 11.5px;
+      color: var(--text-light);
+    }
+    .bottom-strip .tagline {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      color: var(--text-mid);
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .invoice { border: none; border-radius: 0; }
+      .no-print { display: none; }
+    }
+
+    /* ── Print button (screen only) ── */
+    .print-btn {
+      display: block;
+      max-width: 860px;
+      margin: 20px auto 0;
+      text-align: right;
+    }
+    .print-btn button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+    .print-btn button:hover { background: var(--accent-dark); }
+  </style>
+</head>
+<body>
+
+  <!-- Print / Save PDF button (screen only) -->
+  <div class="print-btn no-print">
+    <button onclick="window.print()">Save as PDF / Print</button>
+  </div>
+
+  <div class="invoice">
+
+    <!-- ── HEADER ── -->
+    <div class="header">
+      <div class="logo">Scoart<span>.</span></div>
+      <div class="invoice-label">
+        <div class="word">Invoice</div>
+        <div class="number">#INV-2025-0042</div>
+      </div>
+    </div>
+
+    <!-- ── META STRIP ── -->
+    <div class="meta-strip">
+      <div class="meta-item">
+        <span class="label">Issue Date</span>
+        <span class="value">19 February 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Due Date</span>
+        <span class="value">05 March 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Project</span>
+        <span class="value">US Market Entry Package</span>
+      </div>
+      <div class="meta-item status">
+        <span class="label">Status</span>
+        <span class="value">Unpaid</span>
+      </div>
+    </div>
+
+    <!-- ── BODY ── -->
+    <div class="body">
+
+      <!-- ── PARTIES ── -->
+      <div class="parties">
+        <div class="party-block">
+          <div class="party-type">From</div>
+          <div class="company-name">Scoart Digital</div>
+          <p>
+            www.scoartdigital.com<br>
+            hello@scoartdigital.com<br>
+            New York, NY, United States<br>
+            VAT / Tax ID: US-XXXXXXXXX
+          </p>
+        </div>
+        <div class="party-block">
+          <div class="party-type">Bill To</div>
+          <div class="company-name">Acme Corp Ltd.</div>
+          <p>
+            Attn: Jane Smith, Procurement<br>
+            42 Commerce Street, Suite 800<br>
+            Chicago, IL 60601, United States<br>
+            VAT / Tax ID: US-YYYYYYYYY
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ── LINE ITEMS ── -->
+      <div class="table-label">Services Rendered</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:45%">Description</th>
+            <th style="width:12%">Qty</th>
+            <th style="width:18%">Unit Price</th>
+            <th style="width:25%">Amount (USD)</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <div class="item-desc">US Market Entry Strategy</div>
+              <div class="item-note">Competitor landscape analysis, channel mapping, and go-to-market roadmap for the US e-commerce market.</div>
+            </td>
+            <td>1</td>
+            <td>$2,500.00</td>
+            <td>$2,500.00</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="item-desc">Shopify Store Setup &amp; Optimization</div>
+              <div class="item-note">Theme customization, product import, checkout configuration, and payment gateway integration.</div>
+            </td>
+            <td>1</td>
+            <td>$1,800.00</td>
+            <td>$1,800.00</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="item-desc">SEO &amp; Content Foundation</div>
+              <div class="item-note">Keyword research, on-page optimization for 20 product pages, and 3 launch blog articles.</div>
+            </td>
+            <td>1</td>
+            <td>$1,200.00</td>
+            <td>$1,200.00</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="item-desc">Amazon Listing Optimization</div>
+              <div class="item-note">Title, bullet points, A+ content, and backend keyword strategy for 15 SKUs.</div>
+            </td>
+            <td>15</td>
+            <td>$80.00</td>
+            <td>$1,200.00</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="item-desc">Monthly Growth Retainer</div>
+              <div class="item-note">Ongoing performance monitoring, reporting, and optimization advisory. March 2026.</div>
+            </td>
+            <td>1</td>
+            <td>$950.00</td>
+            <td>$950.00</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!-- ── TOTALS ── -->
+      <div class="totals-row">
+        <div class="totals-box">
+          <div class="totals-line">
+            <span>Subtotal</span>
+            <span>$7,650.00</span>
+          </div>
+          <div class="totals-line">
+            <span>Discount (5%)</span>
+            <span>-$382.50</span>
+          </div>
+          <div class="totals-line">
+            <span>Tax (0% — B2B Export)</span>
+            <span>$0.00</span>
+          </div>
+          <div class="totals-line total">
+            <span>Total Due</span>
+            <span class="amount">$7,267.50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── FOOTER ── -->
+      <div class="footer-grid">
+
+        <div class="footer-block">
+          <div class="block-label">Notes</div>
+          <p>
+            All deliverables are subject to the agreed scope of work outlined in the project proposal dated 12 January 2026. Revisions beyond two rounds per deliverable are billed at $120/hr.
+          </p>
+        </div>
+
+        <div class="footer-block">
+          <div class="block-label payment-block__label">Payment Details</div>
+          <div class="payment-block">
+            <div class="block-label">Bank Transfer (ACH / Wire)</div>
+            <div class="payment-detail">
+              <span class="key">Bank</span>
+              <span class="val">Chase Bank N.A.</span>
+            </div>
+            <div class="payment-detail">
+              <span class="key">Account Name</span>
+              <span class="val">Scoart Digital LLC</span>
+            </div>
+            <div class="payment-detail">
+              <span class="key">Routing No.</span>
+              <span class="val">XXXXXXXXX</span>
+            </div>
+            <div class="payment-detail">
+              <span class="key">Account No.</span>
+              <span class="val">XXXXXXXXXXXX</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /body -->
+
+    <!-- ── BOTTOM STRIP ── -->
+    <div class="bottom-strip">
+      <p>Payment is due within 14 days of the invoice date. Late payments incur a 1.5% monthly fee.</p>
+      <p class="tagline">Empowering Global Brands in the US Market.</p>
+    </div>
+
+  </div><!-- /invoice -->
+
+</body>
+</html>
